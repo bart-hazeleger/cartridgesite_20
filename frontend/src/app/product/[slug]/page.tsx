@@ -1,6 +1,7 @@
 import { apiGet } from "@/lib/api";
 import { Product } from "@/lib/types";
 import Link from "next/link";
+import AddToCartButton from "@/components/AddToCartButton";
 
 export const dynamic = "force-dynamic"; // SSR
 
@@ -20,7 +21,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
             <div className="col-span-5">
                 <h1 className="text-2xl font-semibold">{product.title}</h1>
                 <div className="text-lg font-bold my-2">€ {(product.price/100).toFixed(2)}</div>
-                <button className="px-4 py-2 border rounded">In winkelmand</button>
+                <AddToCartButton sku={product.slug} title={product.title} price={product.price} imageUrl={product.imageUrl} />
             </div>
 
             <div className="col-span-12">
