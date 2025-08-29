@@ -1,0 +1,30 @@
+# Node & build
+node_modules
+.next
+out
+dist
+coverage
+
+# Config & lockfiles
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Git & IDE
+.git
+.idea
+.vscode
+
+# Env files
+.env
+.env.*.local
+
+# Logs
+*.log
+
+# Compiled output
+*.min.js
+*.min.css
+
+# Misc
+.DS_Store
