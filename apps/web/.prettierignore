@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+dist
+coverage
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+.git
+.idea
+.vscode
+.env
+.env.*.local
+*.log
+*.min.js
+*.min.css
+.DS_Store
