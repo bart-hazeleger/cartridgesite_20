@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link';
+import { Link } from '@/navigation';
 
 export default function StorefrontPage() {
     const featuredProducts = [
@@ -54,8 +54,7 @@ export default function StorefrontPage() {
                                 <p className="text-lg font-bold text-gray-900">${product.price}</p>
                                 <button
                                     className="mt-4 w-full rounded-md bg-gray-900 px-4 py-2 text-white hover:bg-gray-800">
-                                    Add to Cart
-                                    <Link href="/checkout">Afrekenen</Link>
+                                    <Link href="/checkout"> Checkout </Link>
                                 </button>
                             </div>
                         ))}
