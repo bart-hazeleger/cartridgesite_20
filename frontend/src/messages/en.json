@@ -1,4 +1,6 @@
 {
-  "nav.checkout": "checkout",
-  "nav.cart": "cart"
+  "nav": {
+    "checkout": "checkout",
+    "cart": "cart"
+  }
 }

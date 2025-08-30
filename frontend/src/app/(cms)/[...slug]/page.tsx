@@ -2,11 +2,9 @@
 import {notFound} from 'next/navigation';
 
 export default async function CmsPage({
-  params,
-}: {
-  params: Promise<{ slug?: string[] }>;
-}) {
-  const { slug = [] } = await params;
-    if ((params.slug ?? []).length === 0) notFound();
-  return <main>...</main>;
+                                          params,
+                                      }: { params: Promise<{slug?: string[]}> }) {
+    const { slug = [] } = await params;
+    if (slug.length === 0) return notFound();  // ← blokkeer root
+    return <main>CMS: {slug.join('/')}</main>;
 }

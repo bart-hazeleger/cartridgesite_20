@@ -1,10 +1,11 @@
+// src/i18n/request.ts
 import {getRequestConfig} from 'next-intl/server';
 import {headers} from 'next/headers';
 
-const SUPPORTED = ['nl', 'en', 'es'] as const;
-type Supported = typeof SUPPORTED[number];
+const SUPPORTED = ['nl','en','es'] as const;
+type Supported = (typeof SUPPORTED)[number];
 
-const domainToLocale: Record<string, Supported> = {
+const map: Record<string, Supported> = {
     'cartucho.es': 'es',
     'tonershop.nl': 'nl',
     'sneltoner.nl': 'nl',
@@ -15,18 +16,17 @@ const domainToLocale: Record<string, Supported> = {
 };
 
 export default getRequestConfig(async ({locale}) => {
-    // Fallback: haal host op en map naar locale
-    const host = headers().get('host')?.split(':')[0]?.toLowerCase();
-    const byDomain = (host && domainToLocale[host]) || undefined;
+    const h = await headers();
+    const host = (h.get('x-forwarded-host') ?? h.get('host') ?? '')
+        .split(':')[0].toLowerCase();
 
-    // Kies volgorde: meegegeven locale → domain → nl
-    const l: Supported =
-        (SUPPORTED as readonly string[]).includes(locale as string)
+    const resolved: Supported =
+        SUPPORTED.includes(locale as Supported)
             ? (locale as Supported)
-            : (byDomain ?? 'nl');
+            : (map[host] ?? 'nl');
 
     return {
-        locale: l, // <-- belangrijk in v4
-        messages: (await import(`@/messages/${l}.json`)).default
+        locale: resolved,
+        messages: (await import(`@/messages/${resolved}.json`)).default
     };
 });

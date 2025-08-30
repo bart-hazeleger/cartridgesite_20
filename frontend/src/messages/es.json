@@ -1,4 +1,6 @@
 {
-  "nav.checkout": "Pagar",
-  "nav.cart": "Carrito"
+  "nav": {
+    "checkout": "Pagar",
+    "cart": "Carrito"
+  }
 }

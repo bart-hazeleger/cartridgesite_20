@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {Link} from '@/navigation';
+import Link from 'next/link';
 
 export default function StorefrontPage() {
     const featuredProducts = [
@@ -26,7 +26,7 @@ export default function StorefrontPage() {
                         <h1 className="mb-4 text-5xl font-bold">Summer Collection 2025</h1>
                         <p className="mb-8 text-xl">Discover the latest trends in fashion</p>
                         <Link
-                            href="/products"
+                            href="/"
                             className="rounded-md bg-white px-8 py-3 text-lg font-semibold text-gray-900 hover:bg-gray-100"
                         >
                             Shop Now

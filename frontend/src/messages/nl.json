@@ -1,4 +1,6 @@
 {
-  "nav.checkout": "Afrekenen",
-  "nav.cart": "Winkelwagen"
+  "nav": {
+    "checkout": "Afrekenen",
+    "cart": "Winkelwagen"
+  }
 }
