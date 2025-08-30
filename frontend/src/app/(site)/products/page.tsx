@@ -1,10 +1,13 @@
 'use client';
 
 import {useState} from 'react';
+import { Link } from '@/navigation';
 import Image from 'next/image';
+import ProductPage from "@/app/(site)/products/[slug]/page";
 
 interface Product {
     id: number;
+    slug: string;
     name: string;
     price: number;
     description: string;
@@ -14,6 +17,7 @@ interface Product {
 const dummyProducts: Product[] = [
     {
         id: 1,
+        slug: "classic-white-t-shirt",
         name: "Classic White T-Shirt",
         price: 29.99,
         description: "A comfortable cotton t-shirt",
@@ -21,6 +25,7 @@ const dummyProducts: Product[] = [
     },
     {
         id: 2,
+        slug: "blue-denim-jeans",
         name: "Blue Denim Jeans",
         price: 79.99,
         description: "Classic fit denim jeans",
@@ -28,6 +33,7 @@ const dummyProducts: Product[] = [
     },
     {
         id: 3,
+        slug: "leather-sneakers",
         name: "Leather Sneakers",
         price: 129.99,
         description: "Casual leather sneakers",
@@ -35,6 +41,7 @@ const dummyProducts: Product[] = [
     },
     {
         id: 4,
+        slug: "cotton-hoodie",
         name: "Cotton Hoodie",
         price: 59.99,
         description: "Warm and cozy hoodie",
@@ -66,7 +73,9 @@ export default function ProductsPage() {
                             />
                         </div>
                         <div className="p-4">
+                            <Link  href={`/products/${product.slug}`}>
                             <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
+                            </Link>
                             <p className="text-gray-600 mb-2">{product.description}</p>
                             <p className="text-lg font-bold mb-4">${product.price.toFixed(2)}</p>
                             <button

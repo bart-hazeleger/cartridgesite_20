@@ -54,7 +54,7 @@ export default function StorefrontPage() {
                                 <p className="text-lg font-bold text-gray-900">${product.price}</p>
                                 <button
                                     className="mt-4 w-full rounded-md bg-gray-900 px-4 py-2 text-white hover:bg-gray-800">
-                                    <Link href="/checkout"> Checkout </Link>
+                                    <Link href="/cart"> Add to Cart </Link>
                                 </button>
                             </div>
                         ))}
@@ -70,13 +70,14 @@ export default function StorefrontPage() {
                         {categories.map((category) => (
                             <Link
                                 key={category.id}
-                                href={`/category/${category.slug}`}
+                                href="#"
                                 className="flex h-40 items-center justify-center rounded-lg bg-white p-6 text-center text-xl font-semibold shadow-sm transition hover:shadow-md"
                             >
                                 {category.name}
                             </Link>
                         ))}
                     </div>
+                    <Link href="/products">Bekijk alle producten</Link>
                 </div>
             </section>
 

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { Link } from '@/navigation';
 import {useRouter} from 'next/navigation';
 
 interface CartItem {
@@ -104,12 +105,12 @@ export default function CartPage() {
                             <p className="text-xl font-semibold">Total:</p>
                             <p className="text-2xl font-bold">${total.toFixed(2)}</p>
                         </div>
-                        <button
-                            onClick={() => router.push('/checkout')}
+                        <Link
+                            href="/checkout"
                             className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
                         >
                             Proceed to Checkout
-                        </button>
+                        </Link>
                     </div>
                 </>
             )}
