@@ -4,6 +4,7 @@ import {useState} from 'react';
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import ProductPage from "@/app/(site)/products/[slug]/page";
+import AddToCartButton from "@/components/buttons/AddToCartButton";
 
 interface Product {
     id: number;
@@ -78,13 +79,7 @@ export default function ProductsPage() {
                             </Link>
                             <p className="text-gray-600 mb-2">{product.description}</p>
                             <p className="text-lg font-bold mb-4">${product.price.toFixed(2)}</p>
-                            <button
-                                onClick={() => handleAddToCart(product.id)}
-                                disabled={loading}
-                                className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 disabled:bg-blue-300"
-                            >
-                                {loading ? 'Adding...' : 'Add to Cart'}
-                            </button>
+                           <AddToCartButton/>
                         </div>
                     </div>
                 ))}

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Link } from '@/navigation';
-import AddToCartButton from "@/components/AddToCartButton";
+import AddToCartButton from "@/components/buttons/AddToCartButton";
 
 export default function StorefrontPage() {
     const featuredProducts = [

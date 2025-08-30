@@ -46,7 +46,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <NextIntlClientProvider messages={messages} locale={locale} key={locale}>
             <header className="text-black p-4 flex items-center justify-center">
                 <Link href="/">
-                    <Image src={LOGOS[tenant]} alt="Logo" width={64} height={64} />
+                    <Image src={LOGOS[tenant]} alt="Logo" width={128} height={128} />
                 </Link>
                 <nav className="ml-8">
                     <ul className="flex space-x-6">
