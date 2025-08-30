@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { Link } from '@/navigation';
-import {useRouter} from 'next/navigation';
 
 interface CartItem {
     id: string;
@@ -31,7 +30,6 @@ const dummyCartItems: CartItem[] = [
 ];
 
 export default function CartPage() {
-    const router = useRouter();
     const [cartItems, setCartItems] = React.useState<CartItem[]>(dummyCartItems);
 
     const updateQuantity = (id: string, newQuantity: number) => {

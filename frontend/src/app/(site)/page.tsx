@@ -68,7 +68,7 @@ export default function StorefrontPage() {
                         {categories.map((category) => (
                             <Link
                                 key={category.id}
-                                href="#"
+                                href="/"
                                 className="flex h-40 items-center justify-center rounded-lg bg-white p-6 text-center text-xl font-semibold shadow-sm transition hover:shadow-md"
                             >
                                 {category.name}

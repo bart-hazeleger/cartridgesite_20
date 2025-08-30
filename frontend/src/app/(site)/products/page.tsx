@@ -1,7 +1,5 @@
 'use client';
 
-import {useState} from 'react';
-import { Link } from '@/navigation';
 import Image from 'next/image';
 import AddToCartButton from "@/components/buttons/AddToCartButton";
 
@@ -50,13 +48,6 @@ const dummyProducts: Product[] = [
 ];
 
 export default function ProductsPage() {
-    const [loading, setLoading] = useState(false);
-
-    const handleAddToCart = async (productId: number) => {
-        setLoading(true);
-        // Add to cart logic would go here
-        setTimeout(() => setLoading(false), 500);
-    };
 
     return (
         <div className="container mx-auto px-4 py-8">
