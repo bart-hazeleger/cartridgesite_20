@@ -5,6 +5,24 @@
   --foreground: #171717;
 }
 
+/* Sneltoner */
+@theme {
+    --color-primary: #002e42;
+    --color-secondary: #009de0;
+}
+
+/* Tonershop */
+[data-tenant="tonershop"] {
+    --color-primary: red;
+    --color-secondary: blue;
+}
+
+/* Cartucho */
+[data-tenant="cartucho"] {
+    --color-primary: #f59e0b;
+    --color-secondary: #ef4444;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

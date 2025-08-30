@@ -3,10 +3,10 @@ import { Link } from '@/navigation';
 
 export default function StorefrontPage() {
     const featuredProducts = [
-        {id: 1, name: 'Classic T-Shirt', price: 29.99, image: '/images/tshirt.jpg'},
-        {id: 2, name: 'Denim Jeans', price: 89.99, image: '/images/jeans.jpg'},
-        {id: 3, name: 'Leather Jacket', price: 199.99, image: '/images/jacket.jpg'},
-        {id: 4, name: 'Sneakers', price: 119.99, image: '/images/sneakers.jpg'},
+        {id: 1, name: 'Classic T-Shirt', price: 29.99, image: '/images/placeholder.jpg'},
+        {id: 2, name: 'Denim Jeans', price: 89.99, image: '/images/placeholder.jpg'},
+        {id: 3, name: 'Leather Jacket', price: 199.99, image: '/images/placeholder.jpg'},
+        {id: 4, name: 'Sneakers', price: 119.99, image: '/images/placeholder.jpg'},
     ]
 
     const categories = [
@@ -77,7 +77,9 @@ export default function StorefrontPage() {
                             </Link>
                         ))}
                     </div>
-                    <Link href="/products">Bekijk alle producten</Link>
+                    <div className="mt-8 flex justify-center">
+                        <Link href="/products" className="bg-primary text-white py-4 px-6 font-bold rounded-sm">Bekijk alle producten</Link>
+                    </div>
                 </div>
             </section>
 
