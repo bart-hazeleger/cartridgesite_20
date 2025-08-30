@@ -1,6 +1,12 @@
 {
   "nav": {
     "checkout": "Afrekenen",
-    "cart": "Winkelwagen"
+    "cart": "Winkelwagen",
+    "products": "Producten",
+    "contact": "Contact",
+    "home": "Home" 
+  },
+  "product": {
+    "addToCart": "In winkelwagen"
   }
 }

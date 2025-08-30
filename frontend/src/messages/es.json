@@ -1,6 +1,12 @@
 {
   "nav": {
     "checkout": "Pagar",
-    "cart": "Carrito"
+    "cart": "Carrito",
+    "products": "Productos",
+    "contact": "Contacto",
+    "home": "Inicio"
+  },
+  "product": {
+    "addToCart": "Añadir al carrito"
   }
 }

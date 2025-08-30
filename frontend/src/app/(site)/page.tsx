@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Link } from '@/navigation';
+import AddToCartButton from "@/components/AddToCartButton";
 
 export default function StorefrontPage() {
     const featuredProducts = [
@@ -52,10 +53,7 @@ export default function StorefrontPage() {
                                 </div>
                                 <h3 className="mb-2 font-semibold">{product.name}</h3>
                                 <p className="text-lg font-bold text-gray-900">${product.price}</p>
-                                <button
-                                    className="mt-4 w-full rounded-md bg-gray-900 px-4 py-2 text-white hover:bg-gray-800">
-                                    <Link href="/cart"> Add to Cart </Link>
-                                </button>
+                                    <AddToCartButton />
                             </div>
                         ))}
                     </div>
