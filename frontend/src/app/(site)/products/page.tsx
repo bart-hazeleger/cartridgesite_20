@@ -3,7 +3,6 @@
 import {useState} from 'react';
 import { Link } from '@/navigation';
 import Image from 'next/image';
-import ProductPage from "@/app/(site)/products/[slug]/page";
 import AddToCartButton from "@/components/buttons/AddToCartButton";
 
 interface Product {
@@ -74,9 +73,7 @@ export default function ProductsPage() {
                             />
                         </div>
                         <div className="p-4">
-                            <Link  href={`/products/${product.slug}`}>
                             <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-                            </Link>
                             <p className="text-gray-600 mb-2">{product.description}</p>
                             <p className="text-lg font-bold mb-4">${product.price.toFixed(2)}</p>
                            <AddToCartButton/>
