@@ -8,9 +8,11 @@
     "web:lint:fix": "pnpm --filter ./apps/web lint:fix",
     "web:format": "pnpm --filter ./apps/web prettier --write .",
     "web:test": "pnpm --filter ./apps/web test",
-
     "lint": "pnpm --recursive lint",
     "lint:fix": "pnpm --recursive lint:fix",
     "format": "pnpm --recursive prettier --write ."
+  },
+  "dependencies": {
+    "next-intl": "^4.3.5"
   }
 }
